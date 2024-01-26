@@ -31,8 +31,8 @@ cd AREP-LAB-01/
 Para ejecutar la aplicación, ejecute el siguiente comando:
 
 ```bash
-mvn clean package
-java -cp target/movieexplorer.jar edu.eci.arep.App
+mvn clean compile
+mvn exec:java -Dexec.mainClass="edu.eci.arep.App"
 ```
 
 El anterior comando limpiará las contrucciones previas, compilará y empaquetará el código en un jar y luego ejecutará la aplicación.

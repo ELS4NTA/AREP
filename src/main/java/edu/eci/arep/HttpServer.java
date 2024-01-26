@@ -103,7 +103,6 @@ public class HttpServer {
                 + "    <body>\r\n"
                 + "        <h1> Title:"+response.get("Title")+"</h1>\r\n"
                 + "        <h2> Released:"+response.get("Released")+"</h2>\r\n"
-                + "        <img src=>\""+response.get("Poster")+"\"/>\r\n"
                 + "        <h2> Genre:"+response.get("Genre")+"</h2>\r\n"
                 + "        <h2> Director:"+response.get("Director")+"</h2>\r\n"
                 + "        <h2> Actors:"+response.get("Actors")+"</h2>\r\n"
