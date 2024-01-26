@@ -112,6 +112,10 @@ public class App {
 
 ## Licencia 📄
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Este proyecto está bajo la Licencia (MIT) - ver el archivo [LICENSE](LICENSE) para ver más detalles.
+
+## Agradecimientos 🎁
+
+* Al profesor [Luis Daniel Benavides Navarro](https://ldbn.is.escuelaing.edu.co/) por compartir sus conocimientos.
