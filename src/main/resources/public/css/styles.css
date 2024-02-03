@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.movie-form {
+    max-width: 400px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.movie-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-field {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.movie-details {
+    display: flex;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.released {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.poster {
+    width: 150px;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+
+.director,
+.actors,
+.language,
+.plot {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.memory-title {
+    padding: 10px 0px;
+    font-size: xxx-large;
+    color: #ffffff;
+}
+
+.memory-game {
+    margin: auto;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.memory-card {
+    width: 6rem;
+    height: 6rem;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    padding: 1rem;
+    position: absolute;
+    border-radius: 1rem;
+    background: #ffffff;
+    backface-visibility: hidden;
+    border: 2px solid #000;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}

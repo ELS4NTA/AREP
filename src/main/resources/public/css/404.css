@@ -1,0 +1,19 @@
+.body {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #FCFF9E 0%, #C67700 100%);
+}
+
+.title {
+    font-size: 6em;
+    font-weight: bold;
+    background: linear-gradient(to right, #C6004C , #FD37AB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.message {
+    font-size: 2em;
+}
