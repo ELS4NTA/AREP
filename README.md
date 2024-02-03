@@ -6,6 +6,9 @@ Este laboratorio tiene como objetivo el diseño y la estructuración de aplicaci
 
 Tambien permite realizar consultas a un API externo de [omdbapi](https://www.omdbapi.com/) para obtener información de películas. La implementación es eficiente en cuanto a recursos así que implementa un Caché que permite evitar hacer consultas repetidas al API externo.
 
+![image](https://github.com/ELS4NTA/AREP-LAB-02/assets/99996670/87c9dc00-c9d0-4b24-a561-5387e9e2cb29)
+
+
 ## Comenzando 🚀
 
 Las siguientes instrucciones le permitirán obtener una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y prueba.
