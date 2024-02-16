@@ -2,7 +2,7 @@
 
 ## Descripción de la aplicación 📖
 
-Este laboratorio explora la creación de un prototipo mínimo que demuestra capcidades reflexivas de JAVA y permite cargar un bean (POJO) y derivar una aplicación Web a partir de él similar a la de Spring.
+Este laboratorio explora la creación de un prototipo mínimo que demuestra capcidades reflexivas de JAVA y permite cargar un bean (POJO) y derivar una aplicación Web a partir de él similar a la de [Spring](https://spring.io/guides/gs/spring-boot).
 
 Además contiene una mini implementación del microframework WEB denominado [sparkjava](https://sparkjava.com/). Este micro framework permite construir aplicaciones web de manera simple usando funciones lambda.
 
