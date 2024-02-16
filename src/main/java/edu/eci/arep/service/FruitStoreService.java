@@ -18,6 +18,9 @@ public class FruitStoreService {
     private Map<String, JsonObject> smoothies;
     private Map<String, Integer> fruitPrices = new HashMap<>();
 
+    /**
+     * Private constructor for the FruitStoreService class.
+     */
     private FruitStoreService() {
         this.smoothies = new ConcurrentHashMap<>();
         fruitPrices.put("apple", 2000);

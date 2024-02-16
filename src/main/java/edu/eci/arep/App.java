@@ -37,6 +37,9 @@ public class App {
         }
     }
 
+    /**
+     * Load the services with the mini Spark framework.
+     */
     private static void loadWithMySpark() {
         // Define the services
         SantaSpark.get("/movie", (requestURI) -> {
@@ -51,6 +54,9 @@ public class App {
         });
     }
 
+    /**
+     * Load the services with the mini Spring framework.
+     */
     private static void loadWithMySpring() {
         // Load the SantaSpring context
         SantaSpring.getInstance();

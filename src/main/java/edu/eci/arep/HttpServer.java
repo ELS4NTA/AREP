@@ -136,6 +136,14 @@ public class HttpServer {
         serverSocket.close();
     }
 
+    /**
+     * Method to call a method.
+     * 
+     * @param requestURI The URI of the request.
+     * @param httpMethod The HTTP method to use.
+     * @return The response of the method.
+     * @throws IOException If an I/O error occurs.
+     */
     private byte[] callMethod(URI requestURI, String httpMethod) throws IOException {
         String calledServiceURI = requestURI.getPath().substring(10);
         Method handlerMethod = SantaSpring.findMappingMethod(calledServiceURI, httpMethod);
@@ -223,6 +231,7 @@ public class HttpServer {
 
     /**
      * Indicates if the server is running
+     * @return true if the server is running, false otherwise
      */
     public boolean isRunning() {
         return running;
