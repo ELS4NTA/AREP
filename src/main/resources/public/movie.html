@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Explorer</title>
+    <link rel="icon" href="./images/favicon.png" />
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/template.css" />
+    <link rel="stylesheet" href="./css/movie.css" />
+</head>
+<body>
+    <main class="top_container">
+        <header class="header_section">
+            <nav class="navbar">
+                <a class="navbar-brand" href="index.html"><span>Santa's Web</span></a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><span>Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="movie.html"><span>Movie Explorer</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="game.html"><span>Memory Game</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fruit.html"><span>Fruit Party</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html"><span>Fruit Shop</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="movie">
+            <form class="movie-form" action="/movie">
+                <label for="name">Movie Explorer</label>
+                <input type="text" id="name" name="name"placeholder="Insert your movie name here"class="input-field" /><br /><br />
+                <input type="button" value="Submit" onclick="loadGetMsg()" class="submit-button" />
+            </form>
+            <div id="getrespmsg"></div>
+            <script src="./js/movie.js"></script>
+        </section>
+        <section class="footer_section">
+            <p>&copy;<a href="https://github.com/ELS4NTA">ELS4NTA</a></p>
+        </section>
+    </main>
+    <script src="./js/movie.js"></script>
+</body>
+</html>
