@@ -14,6 +14,8 @@ Adicionalmente, la aplicación permite el acceso a un servicio de tienda de bati
 
 Disfruta creando diferentes batidos de frutas y jugando a encontrar las parejas de cartas en el juego de memoria.
 
+![image](https://github.com/ELS4NTA/AREP-LAB-04/assets/99996670/dd58723e-9a2d-49e3-8548-2c8d7acac704)
+
 ## Comenzando 🚀
 
 Las siguientes instrucciones le permitirán obtener una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y prueba.
