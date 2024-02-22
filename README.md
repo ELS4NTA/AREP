@@ -32,6 +32,7 @@ Dirijase a su navegador y escriba la siguiente URL [http://localhost:35000/clien
 
 Y se mostrará la siguiente página web:
 
+![image](https://github.com/ELS4NTA/AREP-PARCIAL-T1/assets/99996670/a9bb2c32-9388-4780-bc71-5d1e46ee5a4e)
 
 Luego puede escribir como ejemplo uno de los siguientes comandos en el formulario:
 
@@ -42,3 +43,5 @@ class(java.lang.Math)
 ```java
 invoke(java.lang.System,getenv)
 ```
+
+![image](https://github.com/ELS4NTA/AREP-PARCIAL-T1/assets/99996670/693460e7-0fc8-4539-8f6d-94ae93d0cec7)
