@@ -1,5 +1,8 @@
 # AREP-PARCIAL-T1
+
 Parcial Tercio 1 de Arquitecturas Empresariales
+
+Daniel Antonio Santailla
 
 Para ejecutar el proyecto se debe seguir los siguientes pasos:
 
