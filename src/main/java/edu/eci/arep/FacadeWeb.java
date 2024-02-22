@@ -7,67 +7,71 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.URI;
-import java.net.URISyntaxException;
 
 import com.google.gson.JsonObject;
 
 public class FacadeWeb {
 
-    public static void startFacade(String[] args) throws URISyntaxException, IOException {
-        ServerSocket serverSocket = null;
+    public static void main(String[] args) {
         try {
-            serverSocket = new ServerSocket(35000);
-        } catch (IOException e) {
-            System.err.println("Could not listen on port: 35000 " + e.getMessage());
-            System.exit(1);
-        }
-
-        boolean running = true;
-        while (running) {
-            Socket clientSocket = null;
+            
+            ServerSocket serverSocket = null;
             try {
-                System.out.println("Facade ready to receive...");
-                clientSocket = serverSocket.accept();
+                serverSocket = new ServerSocket(35000);
             } catch (IOException e) {
-                System.err.println("Accept failed " + e.getMessage());
+                System.err.println("Could not listen on port: 35000 " + e.getMessage());
                 System.exit(1);
             }
-            PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-            BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-            String inputLine, outputLine;
     
-            boolean firstLine = true;
-            String requestStringURI = "";
-    
-    
-            while ((inputLine = in.readLine()) != null) {
-                if (firstLine) {
-                    System.out.println("Received: " + inputLine);
-                    requestStringURI = inputLine.split(" ")[1];
-                    firstLine = false;
-                    continue;
+            boolean running = true;
+            while (running) {
+                Socket clientSocket = null;
+                try {
+                    System.out.println("Facade ready to receive...");
+                    clientSocket = serverSocket.accept();
+                } catch (IOException e) {
+                    System.err.println("Accept failed " + e.getMessage());
+                    System.exit(1);
                 }
-                if (!in.ready()) {
-                    break;
+                PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+                BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+                String inputLine, outputLine;
+        
+                boolean firstLine = true;
+                String requestStringURI = "";
+        
+        
+                while ((inputLine = in.readLine()) != null) {
+                    if (firstLine) {
+                        System.out.println("Received: " + inputLine);
+                        requestStringURI = inputLine.split(" ")[1];
+                        firstLine = false;
+                        continue;
+                    }
+                    if (!in.ready()) {
+                        break;
+                    }
                 }
-            }
-
-            URI requestURI = new URI(requestStringURI);
-            
-            if (requestURI.getPath().startsWith("/cliente")) {
-                outputLine = getClientResponse(requestURI);
-            } else if (requestURI.getPath().startsWith("/consulta")) {
-                outputLine = getConsultResponse(requestURI);
-            } else {
-                outputLine = getErrorPage();
-            }
     
-            out.println(outputLine);
-            out.close();
-            in.close();
-            clientSocket.close();
+                URI requestURI = new URI(requestStringURI);
+                
+                if (requestURI.getPath().startsWith("/cliente")) {
+                    outputLine = getClientResponse(requestURI);
+                } else if (requestURI.getPath().startsWith("/consulta")) {
+                    outputLine = getConsultResponse(requestURI);
+                } else {
+                    outputLine = getErrorPage();
+                }
+        
+                out.println(outputLine);
+                out.close();
+                in.close();
+                clientSocket.close();
+            }
+            serverSocket.close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        serverSocket.close();
     }
 
 
