@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <section>
+            <h1>Calculate Sin</h1>
+            <form >
+                <label for="sin">Value:</label><br>
+                <input type="text" id="sin" placeholder="Real value"><br>
+                <input type="button" value="Submit" onclick="loadGetSin()">
+            </form> 
+            <div id="getrespmsgsin"></div>
+        </section>
+        <section>
+            <h1>Calculate Cos</h1>
+            <form action="/cos">
+                <label for="cos">Value:</label><br>
+                <input type="text" id="cos" placeholder="Real value"><br>
+                <input type="button" value="Submit" onclick="loadGetCos()">
+            </form> 
+            <div id="getrespmsgcos"></div>
+        </section>
+        <section>
+            <h1>Is palindrome</h1>
+            <form action="/palindrome">
+                <label for="palindrome">Word:</label><br>
+                <input type="text" id="palindrome" placeholder="Word"><br>
+                <input type="button" value="Submit" onclick="loadGetPalindrome()">
+            </form> 
+            <div id="getrespmsgpalindrome"></div>
+        </section>
+        <section>
+            <h1>Norm vector</h1>
+            <form action="/vector">
+                <label for="vector">Vector 2D:</label><br>
+                <input type="text" id="vector" placeholder="x1,y1,x2,y2"><br>
+                <input type="button" value="Submit" onclick="loadGetMagnitude()">
+            </form> 
+            <div id="getrespmsgmagnitude"></div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="./js/app.js"></script>
+</body>
+</html>
