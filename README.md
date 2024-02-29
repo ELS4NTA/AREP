@@ -4,6 +4,8 @@
 
 Este laboratorio se profundiza los conceptos de modulación por medio de virtualización usando Docker. Utiliza el framework [SparkJava](https://sparkjava.com/) para crear un servidor web que se encarga de realizar operaciones matemáticas. La aplicación se compone de un servicio, este es un servicio que realiza operaciones matemáticas como el seno, coseno, una palabra palíndroma y la magnitud de un vector.
 
+![image](https://github.com/ELS4NTA/AREP-LAB-05/assets/99996670/20a8b06a-6a0d-4f43-8601-93338012bab1)
+
 ## Comenzando 🚀
 
 Las siguientes instrucciones le permitirán obtener una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y prueba.
@@ -27,6 +29,8 @@ docker run -d -p 8080:46000 --name arep-lab-05 els4nta/arep-lab-05
 ```
 
 El anterior comando descargará la imagen de Docker del proyecto y luego ejecutará un contenedor con la aplicación.
+
+![image](https://github.com/ELS4NTA/AREP-LAB-05/assets/99996670/c2a2fab5-eeeb-4414-8b08-6960c79ae332)
 
 Diríjase a su navegador de preferencia y vaya a la siguiente dirección: [http://localhost:8080](http://localhost:8080) para ver la aplicación en funcionamiento.
 
@@ -71,11 +75,15 @@ docker build -t arep-lab-05 .
 
 Este comando creará una imagen de Docker con el nombre `arep-lab-05`.
 
+![image](https://github.com/ELS4NTA/AREP-LAB-05/assets/99996670/3502e710-8088-4d29-9043-73af7577f1cf)
+
 Para ejecutar la aplicación en un contenedor Docker, ejecute el  comandos:
 
 ```docker
 docker run -d -p 8080:46000 --name arep-lab-05 arep-lab-05
 ```
+
+![image](https://github.com/ELS4NTA/AREP-LAB-05/assets/99996670/c1a212ba-70f6-4f6b-af4d-e1b6f704545f)
 
 El anterior comando ejecutará un contenedor con la aplicación mapeando el puerto 46000 del contenedor al puerto 8080 del host. Le pondrá el nombre `arep-lab-05` al contenedor usando la imagen `arep-lab-05`. Diríjase a su navegador de preferencia y vaya a la siguiente dirección: [http://localhost:8080](http://localhost:8080) para ver la aplicación en funcionamiento.
 
