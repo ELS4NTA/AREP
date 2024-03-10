@@ -4,6 +4,10 @@
 
 Este laboratorio explora patrones arquitecutrales en Amazon Web Services (AWS) y su implementación en aplicaciones web. La aplicación web es un servicio de log que almacena cadenas de texto y las muestra en una página web. Utiliza el framework [SparkJava](https://sparkjava.com/) para crear servicios REST y el motor de base de datos [MongoDB](https://www.mongodb.com/) para almacenar datos. Estos se ejecutan en contenedores Docker y se despliega en una instancia EC2 de AWS.
 
+
+https://github.com/ELS4NTA/AREP-LAB-06/assets/99996670/57d031da-e44a-4ad4-a87d-64313853845a
+
+
 ## Comenzando 🚀
 
 Las siguientes instrucciones le permitirán obtener una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y prueba.
@@ -72,6 +76,7 @@ La aplicación que describes tiene varios componentes interconectados
 
 - Es una instancia de MongoDB que se ejecuta dentro de un contenedor Docker en una máquina virtual EC2. Su función principal es almacenar datos las cadenas de texto que recibe el servicio LogService.
 
+![image](https://github.com/ELS4NTA/AREP-LAB-06/assets/99996670/a172b6c2-c7d3-4bab-8012-e537fc0f0340)
 
 ## Versionado 📌
 
