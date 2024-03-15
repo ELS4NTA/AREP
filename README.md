@@ -18,6 +18,24 @@ Las siguientes instrucciones le permitirán obtener una copia del proyecto en fu
 > [!IMPORTANT]
 > Es necesario tener instalado Git, Maven y Java 17 para poder ejecutar el proyecto.
 
+### Instalacion requisitos AWS ☁️
+
+Ejecute los siguientes comandos para instalar git, maven y java en su máquina EC2.
+
+```bash
+sudo yum install -y git
+```
+
+```bash
+sudo yum install -y java-17-amazon-corretto-devel
+```
+
+```bash
+sudo wget https://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+sudo yum install -y apache-maven
+```
+
 ### Instalación 🔧
 
 Realice los siguientes pasos para clonar el proyecto en su máquina local.
@@ -25,6 +43,26 @@ Realice los siguientes pasos para clonar el proyecto en su máquina local.
 ```bash
 git clone https://github.com/ELS4NTA/AREP-LAB-07.git
 cd AREP-LAB-07/
+```
+
+### Generando llaves y certificados 🔏
+
+Para el primer servidor, ejecute los siguientes comandos para generar las llaves y el certificado.
+
+```bash
+mkdir certificates
+keytool -genkeypair -alias ecikeypair -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore ecikeystore.p12 -validity 3650 -ext san=dns: # DNS de IPv4 pública Servidor 1
+keytool -storetype PKCS12 -export -keystore ./ecikeystore.p12 -alias ecikeypair -file ecicert.cer -ext san=dns: # DNS de IPv4 pública Servidor 1
+keytool -storetype PKCS12 -import -file ./ecicert.cer -alias firstCA -keystore myTrustStore.p12 -ext san=dns: # DNS de IPv4 pública Servidor 1
+```
+
+Para el segundo servidor, ejecute los siguientes comandos para generar las llaves y el certificado.
+
+```bash
+mkdir certificates
+keytool -genkeypair -alias ecikeypair -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore ecikeystore.p12 -validity 3650 -ext san=dns: # DNS de IPv4 pública Servidor 2
+keytool -storetype PKCS12 -export -keystore ./ecikeystore.p12 -alias ecikeypair -file ecicert.cer -ext san=dns: # DNS de IPv4 pública Servidor 2
+keytool -storetype PKCS12 -import -file ./ecicert.cer -alias secondCA -keystore myTrustStore.p12 -ext san=dns: # DNS de IPv4 pública Servidor 2
 ```
 
 ## Ejecutando la aplicación ⚙️
