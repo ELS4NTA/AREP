@@ -4,6 +4,7 @@
 
 Este laboratorio explora el uso un certificado `SSL` para asegurar la comunicación entre el cliente y el servidor a través de `HTTPS`. La aplicación permite a los usuarios autenticarse y ver una lista de dulces. Utiliza el framework [SparkJava](https://sparkjava.com/). Se ejecuta en dos máquinas EC2 de [AWS](https://aws.amazon.com/), una para el servidor de autenticación y otra para el servidor de la aplicación.
 
+https://github.com/ELS4NTA/AREP-LAB-07/assets/99996670/351575d6-50a4-46e3-94f6-701d3d1d2d40
 
 ## Comenzando 🚀
 
@@ -47,22 +48,12 @@ cd AREP-LAB-07/
 
 ### Generando llaves y certificados 🔏
 
-Para el primer servidor, ejecute los siguientes comandos para generar las llaves y el certificado.
+Ejecute los siguientes comandos para generar las llaves y el certificado.
 
 ```bash
-mkdir certificates
 keytool -genkeypair -alias ecikeypair -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore ecikeystore.p12 -validity 3650 -ext san=dns: # DNS de IPv4 pública Servidor 1
-keytool -storetype PKCS12 -export -keystore ./ecikeystore.p12 -alias ecikeypair -file ecicert.cer -ext san=dns: # DNS de IPv4 pública Servidor 1
-keytool -storetype PKCS12 -import -file ./ecicert.cer -alias firstCA -keystore myTrustStore.p12 -ext san=dns: # DNS de IPv4 pública Servidor 1
-```
-
-Para el segundo servidor, ejecute los siguientes comandos para generar las llaves y el certificado.
-
-```bash
-mkdir certificates
-keytool -genkeypair -alias ecikeypair -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore ecikeystore.p12 -validity 3650 -ext san=dns: # DNS de IPv4 pública Servidor 2
-keytool -storetype PKCS12 -export -keystore ./ecikeystore.p12 -alias ecikeypair -file ecicert.cer -ext san=dns: # DNS de IPv4 pública Servidor 2
-keytool -storetype PKCS12 -import -file ./ecicert.cer -alias secondCA -keystore myTrustStore.p12 -ext san=dns: # DNS de IPv4 pública Servidor 2
+keytool -export -keystore ./ecikeystore.p12 -alias ecikeypair -file ecicert.cer
+keytool -import -file ./ecicert.cer -alias firstCA -keystore myTrustStore.p12
 ```
 
 ## Ejecutando la aplicación ⚙️
@@ -115,6 +106,8 @@ La aplicación de autenticación es un servidor que recibe peticiones `HTTPS` en
 **CandyApp**
 
 La aplicación de dulces es un servidor que recibe peticiones `HTTPS` en el puerto `6000`. Tiene un certificado `SSL` que le permite recibir las peticiones. El servidor recibe peticiones `GET` en la ruta `/candies`.
+
+![image](https://github.com/ELS4NTA/AREP-LAB-07/assets/99996670/e2f11edb-23fc-4563-98e1-69ceb8c84a2c)
 
 ## Versionado 📌
 
