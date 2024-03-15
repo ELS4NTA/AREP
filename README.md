@@ -51,7 +51,7 @@ cd AREP-LAB-07/
 Ejecute los siguientes comandos para generar las llaves y el certificado.
 
 ```bash
-keytool -genkeypair -alias ecikeypair -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore ecikeystore.p12 -validity 3650 -ext san=dns: # DNS de IPv4 pública Servidor 1
+keytool -genkeypair -alias ecikeypair -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore ecikeystore.p12 -validity 3650 -ext san=dns: # DNS de IPv4 pública Servidor 2
 keytool -export -keystore ./ecikeystore.p12 -alias ecikeypair -file ecicert.cer
 keytool -import -file ./ecicert.cer -alias firstCA -keystore myTrustStore.p12
 ```
