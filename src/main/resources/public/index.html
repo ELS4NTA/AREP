@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="app.js"></script>
+</head>
+<body onload="app.init()">
+    <h1>Login Form</h1>
+    <form id="loginForm" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
+        <input type="submit" value="Login">
+    </form>
+    <div id="postrespmsg"></div>
+</body>
+</html>
