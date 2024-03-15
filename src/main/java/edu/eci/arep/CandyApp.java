@@ -39,7 +39,7 @@ public class CandyApp {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
         }
-        return 6000;
+        return 4000;
     }
 
 }

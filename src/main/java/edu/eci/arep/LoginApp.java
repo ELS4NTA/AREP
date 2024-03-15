@@ -79,7 +79,7 @@ public class LoginApp {
         if (System.getenv("URL") != null) {
             return System.getenv("URL");
         }
-        return "https://localhost:6000/candies";
+        return "https://localhost:4000/candies";
     }
 
 }
