@@ -20,7 +20,7 @@ import spark.Request;
 public class RoundRobbin {
 
     private static final String USER_AGENT = "Mozilla/5.0";
-    private static final List<String> DOMAINS = Arrays.asList("localhost:4567", "localhost:4567");
+    private static final List<String> DOMAINS = Arrays.asList("3.85.236.53:4567", "107.20.48.20:4567");
     private static final Logger LOGGER = LoggerFactory.getLogger(RoundRobbin.class);
     private static int currentLogService = 0;
 
