@@ -92,6 +92,9 @@ La aplicación tiene los siguientes componentes:
 
 - Servicio que ofrece la funcionalidad de búsqueda lineal y binaria por una lista ingresada por el usuario.
 
+![image](https://github.com/ELS4NTA/AREP-PARCIAL-T2/assets/99996670/a221feba-9a5e-4172-b43f-710c2a979b00)
+
+
 ## Autores ✒️
 
 - **Daniel Santanilla** - [ELS4NTA](https://github.com/ELS4NTA)
