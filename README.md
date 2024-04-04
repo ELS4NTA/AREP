@@ -6,6 +6,8 @@ Parcial Tercio 2 de Arquitecturas Empresariales
 
 Esta aplicación presenta un sistema de microservicios que tiene un servicio con el nombre Math Services para computar las funciones de búsqueda. El servicio de las funciones de búsqueda estan desplegadas en dos de EC2. Adicionalmente, se implementa un service proxy que recibe las solicitudes de llamado desde los clientes  y se las delega a las dos instancias del servicio de búsqueda usando un algoritmo de balanceo de cargas round-robin. El proxy esta desplegado en otra máquina EC2. Éste tiene un cliente Web con un formulario que recibe el valor y de manera asíncrona e invoca el servicio en el PROXY. Visite la sección de [Arquitecura de la aplicación](#arquitecura-de-la-aplicación-📐).
 
+[Examen AREP T2.webm](https://github.com/ELS4NTA/AREP-PARCIAL-T2/assets/99996670/2e4593cd-5727-473c-8a46-783416b4f414)
+
 ## Comenzando 🚀
 
 Para ejecutar el proyecto se debe seguir los siguientes pasos:
