@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Services</title>
+</head>
+<body>
+    <h1>Math Services Form</h1>
+    <form>
+        <label for="list">List:</label>
+        <input type="text" id="list" name="list" placeholder="Enter list separated by commas">
+
+        <label for="value">Value:</label>
+        <input type="text" id="value" name="value" placeholder="Enter a value">
+
+        <label for="searchType">Check if you want to search by linear in an other case don't check to search by binary:</label>
+        <input type="checkbox" id="searchType" name="searchType" value="Search by binary">
+
+        <input type="button" value="Submit" onclick="loadGetMsg()" />
+    </form>
+    <div id="getrespmsg"></div>
+    <script src="./app.js"></script>
+</body>
+</html>
