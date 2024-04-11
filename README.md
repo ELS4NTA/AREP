@@ -71,6 +71,8 @@ Los componentes principales de la arquitectura son los siguientes:
 
 Las funciones sin servidor de la aplicación se activan cuando los usuarios realizan solicitudes a la API Gateway.
 
+![arquitecturataller8](https://github.com/An6ie02/AREP-TALLER-08/assets/99996670/a0ec606e-f438-4ff1-b432-57594fa4fae4)
+
 ## Versionado 📌
 
   ![AREP LAB 08](https://img.shields.io/badge/AREP_LAB_08-v1.0.0-blue)
