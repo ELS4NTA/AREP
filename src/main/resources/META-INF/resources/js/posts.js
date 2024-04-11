@@ -11,7 +11,7 @@ function addPostToStream(post) {
 
     placeContent(li, post);
     placeDate(li, post);
-    ul.appendChild(li);
+    ul.prepend(li);
 }
 
 function placeContent(li, post) {

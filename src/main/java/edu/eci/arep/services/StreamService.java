@@ -46,7 +46,7 @@ public class StreamService {
                 Document document = cursor.next();
                 Post post = new Post();
                 post.setId(document.getString("id"));
-                post.setUsername(document.getString("creator"));
+                post.setUsername(document.getString("username"));
                 post.setCreationDate(
                         document.getDate("creationDate").toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
                 post.setContent(document.getString("content"));
@@ -70,7 +70,7 @@ public class StreamService {
         post.setId(id);
         Document document = new Document()
                 .append("id", post.getId())
-                .append("creator", post.getUsername())
+                .append("username", post.getUsername())
                 .append("creationDate", LocalDate.now())
                 .append("content", post.getContent());
         LOGGER.info("Adding post to stream: {} -- {}", post.getId(), post.getUsername());

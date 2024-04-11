@@ -15,6 +15,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 
 import edu.eci.arep.model.User;
+import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 
@@ -33,6 +34,12 @@ public class UserService {
     MongoClient mongoClient;
     private static final Logger LOGGER = LoggerFactory.getLogger(UserService.class);
 
+    @PostConstruct
+    void init() {
+        addUser(new User("angie", "An6ie02"));
+        addUser(new User("daniel", "ELS4NTA"));
+    }
+
     /**
      * Retrieves a list of users from the database.
      *
@@ -46,6 +53,7 @@ public class UserService {
                 Document document = cursor.next();
                 User user = new User();
                 user.setUsername(document.getString("username"));
+                user.setPassword("************");
                 users.add(user);
             }
         } finally {
@@ -68,6 +76,22 @@ public class UserService {
         LOGGER.info("Adding user: {}", document);
         getCollection().insertOne(document);
         return document;
+    }
+
+    /**
+     * Verifies the password of the given user.
+     *
+     * @param username the username of the user
+     * @param password the password to be verified
+     * @return true if the password is correct, false otherwise
+     */
+    public boolean verifyPassword(String username, String password) {
+        Document document = getCollection().find(new Document("username", username)).first();
+        if (document != null) {
+            String hashedPassword = document.getString("password");
+            return hashedPassword.equals(hashOfPassword(password));
+        }
+        return false;
     }
 
     /**

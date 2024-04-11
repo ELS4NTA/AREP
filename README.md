@@ -2,7 +2,7 @@
 
 ## Descripción de la aplicación 📖
 
-Este laboratorio explora el uso un certificado `SSL` para asegurar la comunicación entre el cliente y el servidor a través de `HTTPS`. La aplicación permite a los usuarios autenticarse y ver una lista de dulces. Utiliza el framework [SparkJava](https://sparkjava.com/). Se ejecuta en dos máquinas EC2 de [AWS](https://aws.amazon.com/), una para el servidor de autenticación y otra para el servidor de la aplicación.
+Este ....
 
 ## Comenzando 🚀
 
@@ -13,9 +13,10 @@ Las siguientes instrucciones le permitirán obtener una copia del proyecto en fu
 - [Git](https://git-scm.com/) - Control de versiones
 - [Maven](https://maven.apache.org/) - Gestor de dependencias
 - [Java](https://www.oracle.com/java/technologies/downloads/#java17) - Lenguaje de programación
+- [Docker](https://www.docker.com/) - Motor de contenedores
 
 > [!IMPORTANT]
-> Es necesario tener instalado Git, Maven y Java 17 para poder ejecutar el proyecto.
+> Es necesario tener instalado Git, Maven, Docker y Java 17 para poder ejecutar el proyecto.
 
 ### Instalación 🔧
 
@@ -28,46 +29,51 @@ cd AREP-LAB-08/
 
 ## Ejecutando la aplicación ⚙️
 
-Para compilar el proyecto se debe ejecutar el siguiente comando:
+Para crear un monolito para realizar pruebas locales, ejecute el siguiente comando en la raíz del proyecto.
 
 ```bash
-mvn clean compile quarkus:dev
+mvn clean package
+docker-compose up -d
 ```
 
-Diríjase a su navegador de preferencia y vaya a la siguiente dirección: [https://localhost:5000](https://localhost:5000) para ver la aplicación en funcionamiento. Podrá usar las credenciales de la siguiente tabla para ingresar a la aplicación.
+El anterior comando limpiará las contrucciones previas, compilará y luego ejecutará en distintos contenedores los servicios de la aplicación.
+
+Diríjase a su navegador de preferencia y vaya a la siguiente dirección: [https://localhost:8080](https://localhost:8080) para ver la aplicación en funcionamiento. Podrá usar las credenciales de la siguiente tabla para ingresar a la aplicación.
 
 | Usuario    | Contraseña |
 |------------|------------|
-| Bob        | password1  |
-| Alice      | password2  |
-| Eve        | password3  |
-| Charlie    | password4  |
+| angie      | An6ie02    |
+| daniel     | ELS4NTA    |
 
 ## Generando Javadoc 📦
 
-Para generar la documentación de la aplicación, ejecute el siguiente comando, los archivos Javadoc se generarán en el directorio `target/site/apidocs` dentro del proyecto.
+Para generar la documentación de la aplicación, debe ejecute el siguiente comando.
 
 ```bash
-mvn site
+mvn javadoc:javadoc
 ```
 
-Despues de ejecutar el comando anterior, abra el archivo `index.html` que se encuentra en el directorio `target/site/` con su navegador de preferencia luego búsque la sección **project reports** y haga click en la opción que dice `Project Javadoc` para ver la documentación de la aplicación.
+El anterior comando crea un archivo con la documentación de la aplicación, esta la puede encontrar en `target/site/apidocs/index.html`.
 
 ## Arquitecura de la aplicación 📐
 
-**LoginApp**
+Los componentes principales de la arquitectura son los siguientes:
 
-La aplicación de autenticación es un servidor que recibe peticiones `HTTPS` en el puerto `5000`. Tiene un certificado `SSL` que le permite recibir las peticiones. El servidor recibe peticiones `POST` en la ruta `/login`. Se comunica con **CandyApp** para obtener la lista de dulces a través de una conexión segura usando el componente `SecureURLReader`.
+**Amazon API Gateway**: La API Gateway es un servicio de AWS que enruta las solicitudes de los usuarios a los componentes adecuados de la aplicación.
 
-**CandyApp**
+**AWS Lambda**: Lambda es un servicio de AWS que permite ejecutar código sin aprovisionar o administrar servidores. En este caso, Lambda se utiliza para ejecutar las funciones sin servidor de la aplicación.
 
-La aplicación de dulces es un servidor que recibe peticiones `HTTPS` en el puerto `4000`. Tiene un certificado `SSL` que le permite recibir las peticiones. El servidor recibe peticiones `GET` en la ruta `/candies`.
+**Amazon S3**: S3 es un servicio de almacenamiento de objetos de AWS que se utiliza para almacenar los datos de la aplicación.
 
-![image](https://github.com/ELS4NTA/AREP-LAB-07/assets/99996670/e2f11edb-23fc-4563-98e1-69ceb8c84a2c)
+**MongoDB**: MongoDB es una base de datos de documentos no relacionales que se utiliza para almacenar los datos de la aplicación.
+
+**Amazon Cognito**: Cognito es un servicio de administración de identidad y acceso de AWS que se utiliza para autenticar a los usuarios de la aplicación.
+
+Las funciones sin servidor de la aplicación se activan cuando los usuarios realizan solicitudes a la API Gateway.
 
 ## Versionado 📌
 
-  ![AREP LAB 07](https://img.shields.io/badge/AREP_LAB_07-v1.0.0-blue)
+  ![AREP LAB 08](https://img.shields.io/badge/AREP_LAB_08-v1.0.0-blue)
 
 ## Autores ✒️
 

@@ -9,6 +9,12 @@ const app = (function () {
         getPosts();
     }
 
+    function initLogin() {
+        document.getElementById("loginform").addEventListener("submit", function(event) {
+            event.preventDefault();
+        });
+    }
+
     function getPosts() {
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function () {
@@ -20,8 +26,8 @@ const app = (function () {
 
     function createPost() {
         let content = document.getElementById("content").value;
+        document.getElementById("content").value = "";
         let username = sessionStorage.getItem("username");
-        console.log("sending post");
         fetch(`${baseUrl}/api/v1/stream`, {
             method: "POST",
             headers: {
@@ -31,7 +37,6 @@ const app = (function () {
         })
         .then((response) => response.json())
         .then((post) => {
-            console.log("Success:", post);
             addPostToStream(post);
         });
     }
@@ -40,23 +45,39 @@ const app = (function () {
         let username = document.getElementById("username").value;
         let password = document.getElementById("password").value;
 
-        fetch(`${baseUrl}/api/v1/login`, {
+        fetch(`${baseUrl}/secured/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({ username, password }),
         })
-        .then((response) => response.json())
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Login failed");
+            }
+            return response.json();
+        })
         .then((data) => {
-            console.log("Success:", data);
             sessionStorage.setItem("username", username);
-            getPosts();
+            sessionStorage.setItem("token", data.token);
+            window.location.href = "stream.html";
+        })
+        .catch((error) => {
+            alert(error);
         });
+    }
+
+    function logout() {
+        sessionStorage.clear();
+        window.location.href = "index.html";
     }
 
     return {
         init: init,
+        initLogin: initLogin,
         createPost: createPost,
+        login: login,
+        logout: logout
     }
 })();
