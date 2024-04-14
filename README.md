@@ -2,7 +2,7 @@
 
 ## Descripción de la aplicación 📖
 
-Este ....
+Este laboratorio consiste en una aplicación web que permite a los usuarios autenticarse, por medio de [JWT](https://jwt.io/) para acceder a una página que contienen publicaciones al estilo de twitter. Los usuarios pueden realizar publicaciones, las cuales se almacenan en una base de datos no relacional [MongoDB](https://www.mongodb.com/). La aplicación se despliega en [AWS](https://aws.amazon.com/) y se utiliza [Amazon Cognito](https://aws.amazon.com/cognito/) para la autenticación de los usuarios. Además, se utilizan funciones [AWS Lambda](https://aws.amazon.com/lambda/) para almacenar y obtener los datos de la base de datos. El [Amazon API Gateway](https://aws.amazon.com/api-gateway/) se encarga de enrutar las solicitudes de los usuarios a los componentes adecuados de la aplicación. Ver la arquitectura de la aplicación [aquí](#arquitecura-de-la-aplicación-).
 
 ## Comenzando 🚀
 
@@ -75,11 +75,12 @@ Las funciones sin servidor de la aplicación se activan cuando los usuarios real
 
 ## Despliegue en AWS 🚀
 
-En el siguiente video se muestra el despliegue de la aplicación en AWS: 
-+ Se puede observar la base de datos MongoDB en la máquina virtual en EC2.
-+ Se muestran las pruebas de las funciones lambda junto con el correcto almacenamiento de los datos en la base de datos. Las funciones lambda son: `stream-post` la cual almacena un nuevo dato en la base de datos y `stream-get` la cual obtiene todos los datos almacenados en la base de datos.
-+ Estas funciones son invocadas por el API Gateway, el cual se encarga de enrutar las solicitudes de los usuarios a los componentes adecuados de la aplicación.
-+ Finalmente, se muestra la autenticación de los usuarios en la aplicación mediante Amazon Cognito, en caso de que se quiera acceder directamente a la aplicación sin autenticación, se redirige a la página de login.
+En el siguiente video se muestra el despliegue de la aplicación en AWS:
+
+- Se puede observar la base de datos MongoDB en la máquina virtual en EC2.
+- Se muestran las pruebas de las funciones lambda junto con el correcto almacenamiento de los datos en la base de datos. Las funciones lambda son: `stream-post` la cual almacena un nuevo dato en la base de datos y `stream-get` la cual obtiene todos los datos almacenados en la base de datos.
+- Estas funciones son invocadas por el API Gateway, el cual se encarga de enrutar las solicitudes de los usuarios a los componentes adecuados de la aplicación.
+- Finalmente, se muestra la autenticación de los usuarios en la aplicación mediante Amazon Cognito, en caso de que se quiera acceder directamente a la aplicación sin autenticación, se redirige a la página de login.
 
 https://github.com/An6ie02/AREP-TALLER-08/assets/100453879/257e3300-e85c-4c62-a3b9-78f6a473dfd2
 
@@ -88,8 +89,6 @@ https://github.com/An6ie02/AREP-TALLER-08/assets/100453879/257e3300-e85c-4c62-a3
   ![AREP LAB 08](https://img.shields.io/badge/AREP_LAB_08-v1.0.0-blue)\
   [![Static Badge](https://img.shields.io/badge/AREP_LAB_08_DESPLIEGUE-v1.0.0-blue)](https://github.com/An6ie02/AREP-TALLER-08/tree/deploy)
 
-
-  
 ## Autores ✒️
 
 - **Daniel Santanilla** - [ELS4NTA](https://github.com/ELS4NTA)
