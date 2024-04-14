@@ -23,8 +23,8 @@ Las siguientes instrucciones le permitirán obtener una copia del proyecto en fu
 Realice los siguientes pasos para clonar el proyecto en su máquina local.
 
 ```bash
-git clone https://github.com/An6ie02/AREP-TALLER-08.git
-cd AREP-TALLER-08/
+git clone https://github.com/ELS4NTA/AREP-LAB-08.git
+cd AREP-LAB-08/
 ```
 
 ## Ejecutando la aplicación ⚙️
