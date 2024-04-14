@@ -23,8 +23,8 @@ Las siguientes instrucciones le permitirán obtener una copia del proyecto en fu
 Realice los siguientes pasos para clonar el proyecto en su máquina local.
 
 ```bash
-git clone https://github.com/ELS4NTA/AREP-LAB-08.git
-cd AREP-LAB-08/
+git clone https://github.com/An6ie02/AREP-TALLER-08.git
+cd AREP-TALLER-08/
 ```
 
 ## Ejecutando la aplicación ⚙️
@@ -38,7 +38,7 @@ docker-compose up -d
 
 El anterior comando limpiará las contrucciones previas, compilará y luego ejecutará en distintos contenedores los servicios de la aplicación.
 
-Diríjase a su navegador de preferencia y vaya a la siguiente dirección: [https://localhost:8080](https://localhost:8080) para ver la aplicación en funcionamiento. Podrá usar las credenciales de la siguiente tabla para ingresar a la aplicación.
+Diríjase a su navegador de preferencia y vaya a la siguiente dirección: [http://localhost:8080](http://localhost:8080) para ver la aplicación en funcionamiento. Podrá usar las credenciales de la siguiente tabla para ingresar a la aplicación.
 
 | Usuario    | Contraseña |
 |------------|------------|
