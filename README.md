@@ -62,6 +62,7 @@ Se utiliza la biblioteca Lang Chain para interactuar con OpenAI y enviar las sol
 ```bash
 python chatgpt.py
 ```
+![Screenshot 2024-04-18 093116](https://github.com/ELS4NTA/AREP-LAB-09/assets/99996670/ee97d596-9a2d-4c9d-a6ad-49df2e2c4bd8)
 
 ### Escribir un RAG simple utilizando una base de datos de vectores en memoria
 
@@ -70,6 +71,7 @@ Creación de un Recuperador de Respuestas Generativas (RAG) simple utilizando un
 ```bash
 python memoryrag.py
 ```
+![Screenshot 2024-04-18 093106](https://github.com/ELS4NTA/AREP-LAB-09/assets/99996670/7555c992-6da3-4322-a3e7-172e9807ee39)
 
 ### Crear un RAG simple utilizando Pinecone
 
@@ -78,6 +80,7 @@ Creación de un Recuperador de Respuestas Generativas (RAG) simple utilizando Pi
 ```bash
 python pineconerag.py
 ```
+![Screenshot 2024-04-18 093048](https://github.com/ELS4NTA/AREP-LAB-09/assets/99996670/ae5e8517-380f-40c4-9088-688f21a42af4)
 
 ## Construido con 🛠️
 
