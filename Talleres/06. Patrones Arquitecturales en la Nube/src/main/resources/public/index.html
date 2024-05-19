@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Log Saver</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="https://cdn.icon-icons.com/icons2/1446/PNG/512/22290spoutingwhale_98736.png">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <body>
+        <h1>Logs Form</h1>
+        <form action="/log">
+            <label for="msg">Message:</label><br>
+            <input type="text" id="msg" name="msg" placeholder="Enter log message"><br><br>
+            <input type="button" value="Submit" onclick="loadGetMsg()">
+        </form>
+        <div id="logsTable"></div>
+        <script src="app.js"></script>
+    </body>
+</html>
