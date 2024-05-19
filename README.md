@@ -6,8 +6,7 @@ Este laboratorio tiene como objetivo el diseño y la estructuración de aplicaci
 
 Tambien permite realizar consultas a un API externo de [omdbapi](https://www.omdbapi.com/) para obtener información de películas. La implementación es eficiente en cuanto a recursos así que implementa un Caché que permite evitar hacer consultas repetidas al API externo.
 
-![image](https://github.com/ELS4NTA/AREP-LAB-02/assets/99996670/87c9dc00-c9d0-4b24-a561-5387e9e2cb29)
-
+![image](https://github.com/ELS4NTA/AREP/assets/99996670/89809a88-dd1a-42d0-907e-5ba7c6b06b3b)
 
 ## Comenzando 🚀
 
@@ -27,9 +26,9 @@ Las siguientes instrucciones le permitirán obtener una copia del proyecto en fu
 Realice los siguientes pasos para clonar el proyecto en su máquina local.
 
 ```bash
-git clone https://github.com/ELS4NTA/AREP-LAB-02.git
-cd AREP-LAB-02/
-
+git clone https://github.com/ELS4NTA/AREP.git
+cd AREP/
+git checkout taller-2
 ```
 
 ## Ejecutando la aplicación ⚙️
@@ -38,7 +37,6 @@ Para ejecutar la aplicación, ejecute el siguiente comando:
 
 ```bash
 mvn clean compile exec:java '-Dexec.mainClass=edu.eci.arep.App'
-
 ```
 
 El anterior comando limpiará las contrucciones previas, compilará y empaquetará el código en un jar y luego ejecutará la aplicación.
