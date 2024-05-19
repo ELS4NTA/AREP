@@ -23,8 +23,9 @@ Las siguientes instrucciones le permitirán obtener una copia del proyecto en fu
 Realice los siguientes pasos para clonar el proyecto en su máquina local.
 
 ```bash
-git clone https://github.com/ELS4NTA/AREP-LAB-08.git
-cd AREP-LAB-08/
+git clone https://github.com/ELS4NTA/AREP.git
+cd AREP/
+git checkout taller-8
 ```
 
 ## Ejecutando la aplicación ⚙️
@@ -36,7 +37,7 @@ mvn clean package
 docker-compose up -d
 ```
 
-El anterior comando limpiará las contrucciones previas, compilará y luego ejecutará en distintos contenedores los servicios de la aplicación.
+El anterior comando limpiará las construcciones previas, compilará y luego ejecutará en distintos contenedores los servicios de la aplicación.
 
 Diríjase a su navegador de preferencia y vaya a la siguiente dirección: [http://localhost:8080](http://localhost:8080) para ver la aplicación en funcionamiento. Podrá usar las credenciales de la siguiente tabla para ingresar a la aplicación.
 
@@ -55,7 +56,7 @@ mvn javadoc:javadoc
 
 El anterior comando crea un archivo con la documentación de la aplicación, esta la puede encontrar en `target/site/apidocs/index.html`.
 
-## Arquitecura de la aplicación 📐
+## Arquitectura de la aplicación 📐
 
 Los componentes principales de la arquitectura son los siguientes:
 
@@ -71,7 +72,7 @@ Los componentes principales de la arquitectura son los siguientes:
 
 Las funciones sin servidor de la aplicación se activan cuando los usuarios realizan solicitudes a la API Gateway.
 
-![arquitecturataller8](https://github.com/An6ie02/AREP-TALLER-08/assets/99996670/a0ec606e-f438-4ff1-b432-57594fa4fae4)
+![arquitectura-taller-8](https://github.com/ELS4NTA/AREP/assets/99996670/a8ecac8c-321e-4619-a093-653b804bf028)
 
 ## Despliegue en AWS 🚀
 
@@ -82,7 +83,7 @@ En el siguiente video se muestra el despliegue de la aplicación en AWS:
 - Estas funciones son invocadas por el API Gateway, el cual se encarga de enrutar las solicitudes de los usuarios a los componentes adecuados de la aplicación.
 - Finalmente, se muestra la autenticación de los usuarios en la aplicación mediante Amazon Cognito, en caso de que se quiera acceder directamente a la aplicación sin autenticación, se redirige a la página de login.
 
-https://github.com/An6ie02/AREP-TALLER-08/assets/100453879/257e3300-e85c-4c62-a3b9-78f6a473dfd2
+[AREP-LAB-08.webm](https://github.com/ELS4NTA/AREP/assets/99996670/de6d04aa-1550-4b4e-8ab1-b03d7a3bac71)
 
 ## Versionado 📌
 
