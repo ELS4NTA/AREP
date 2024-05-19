@@ -1,0 +1,11 @@
+jupyterlab
+openai
+tiktoken
+langchain
+openai
+chromadb
+langchainhub
+bs4
+pinecone-client
+langchain-pinecone
+langchain-community
