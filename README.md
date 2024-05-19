@@ -1,6 +1,6 @@
 # TALLER 9: Large Lenguage Models (LLMs)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ELS4NTA/AREP-LAB-09/blob/taller-9/tallerllm.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ELS4NTA/AREP/blob/taller-9/tallerllm.ipynb)
 
 ## Comenzando 🚀
 
