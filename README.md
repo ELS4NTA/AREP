@@ -7,8 +7,9 @@ Daniel Antonio Santailla
 Para ejecutar el proyecto se debe seguir los siguientes pasos:
 
 ```bash
-git clone https://github.com/ELS4NTA/AREP-PARCIAL-T1.git
-cd AREP-PARCIAL-T1/
+git clone https://github.com/ELS4NTA/AREP.git
+cd AREP/
+git checkout parcial-tercio-1
 ```
 
 Para compilar el proyecto se debe ejecutar el siguiente comando:
