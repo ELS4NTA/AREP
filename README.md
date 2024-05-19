@@ -22,9 +22,9 @@ Las siguientes instrucciones le permitirán obtener una copia del proyecto en fu
 Realice los siguientes pasos para clonar el proyecto en su máquina local.
 
 ```bash
-git clone https://github.com/ELS4NTA/AREP-LAB-01.git
-cd AREP-LAB-01/
-
+git clone https://github.com/ELS4NTA/AREP.git
+cd AREP/
+git checkout taller-1
 ```
 
 ## Ejecutando la aplicación ⚙️
@@ -34,7 +34,6 @@ Para ejecutar la aplicación, ejecute el siguiente comando:
 ```bash
 mvn clean compile
 mvn exec:java '-Dexec.mainClass=edu.eci.arep.App'
-
 ```
 
 El anterior comando limpiará las contrucciones previas, compilará y empaquetará el código en un jar y luego ejecutará la aplicación.
