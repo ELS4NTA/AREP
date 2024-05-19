@@ -22,7 +22,7 @@ Para ejecutar el proyecto se debe seguir los siguientes pasos:
 > Es necesario tener instalado Git, Maven y Java 17 para poder ejecutar el proyecto.
 
 > [!NOTE]
-> Si desea relizar la instalación en AWS, vea la sección de [Instalación en AWS](#instalación-en-aws-☁)
+> Si desea relizar la instalación en AWS, vea la sección de [Instalación en AWS](#instalación-en-aws-)
 
 ### Instalación 🔧
 
@@ -95,8 +95,7 @@ La aplicación tiene los siguientes componentes:
 
 - Servicio que ofrece la funcionalidad de búsqueda lineal y binaria por una lista ingresada por el usuario.
 
-![image](https://github.com/ELS4NTA/AREP-PARCIAL-T2/assets/99996670/a221feba-9a5e-4172-b43f-710c2a979b00)
-
+![image](https://github.com/ELS4NTA/AREP/assets/99996670/dd4c0f4b-2e1d-41b3-90b0-fae406543ea0)
 
 ## Autores ✒️
 
