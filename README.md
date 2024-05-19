@@ -2,9 +2,9 @@
 
 ## Descripción de la aplicación 📖
 
-Este laboratorio se profundiza los conceptos de modulación por medio de virtualización usando Docker. Utiliza el framework [SparkJava](https://sparkjava.com/) para crear un servidor web que se encarga de realizar operaciones matemáticas. La aplicación se compone de un servicio, este es un servicio que realiza operaciones matemáticas como el seno, coseno, una palabra palíndroma y la magnitud de un vector.
+Este laboratorio se profundiza los conceptos de modulación por medio de virtualización usando Docker. Utiliza el framework [SparkJava](https://sparkjava.com/) para crear un servidor web que se encarga de realizar operaciones matemáticas. La aplicación se compone de un servicio, este es un servicio que realiza operaciones matemáticas como el seno, coseno, una palabra palindrome y la magnitud de un vector.
 
-![image](https://github.com/ELS4NTA/AREP-LAB-05/assets/99996670/20a8b06a-6a0d-4f43-8601-93338012bab1)
+![image](https://github.com/ELS4NTA/AREP/assets/99996670/bb3eab40-486a-4f1e-8f90-b806f52d8886)
 
 ## Comenzando 🚀
 
@@ -30,7 +30,7 @@ docker run -d -p 8080:46000 --name arep-lab-05 els4nta/arep-lab-05
 
 El anterior comando descargará la imagen de Docker del proyecto y luego ejecutará un contenedor con la aplicación.
 
-![image](https://github.com/ELS4NTA/AREP-LAB-05/assets/99996670/c2a2fab5-eeeb-4414-8b08-6960c79ae332)
+![image](https://github.com/ELS4NTA/AREP/assets/99996670/f872a38c-a428-4886-aa60-c4e964f0008f)
 
 Diríjase a su navegador de preferencia y vaya a la siguiente dirección: [http://localhost:8080](http://localhost:8080) para ver la aplicación en funcionamiento.
 
@@ -39,8 +39,9 @@ Diríjase a su navegador de preferencia y vaya a la siguiente dirección: [http:
 Realice los siguientes pasos para clonar el proyecto en su máquina local.
 
 ```bash
-git clone https://github.com/ELS4NTA/AREP-LAB-05.git
-cd AREP-LAB-05/
+git clone https://github.com/ELS4NTA/AREP.git
+cd AREP/
+gti checkout taller-5
 ```
 
 ## Ejecutando la aplicación ⚙️
@@ -51,7 +52,7 @@ Para ejecutar la aplicación, ejecute el siguiente comando:
 mvn clean compile exec:java '-Dexec.mainClass=edu.eci.arep.App'
 ```
 
-El anterior comando limpiará las contrucciones previas, compilará y luego ejecutará la aplicación.
+El anterior comando limpiará las construcciones previas, compilará y luego ejecutará la aplicación.
 
 Diríjase a su navegador de preferencia y vaya a la siguiente dirección: [http://localhost:4567](http://localhost:4567) para ver la aplicación en funcionamiento.
 
@@ -63,9 +64,9 @@ Para generar la documentación de la aplicación, ejecute el siguiente comando, 
 mvn site
 ```
 
-Despues de ejecutar el comando anterior, abra el archivo `index.html` que se encuentra en el directorio `target/site/` con su navegador de preferencia luego búsque la sección **project reports** y haga click en la opción que dice `Project Javadoc` para ver la documentación de la aplicación.
+Después de ejecutar el comando anterior, abra el archivo `index.html` que se encuentra en el directorio `target/site/` con su navegador de preferencia luego busque la sección **project reports** y haga click en la opción que dice `Project Javadoc` para ver la documentación de la aplicación.
 
-## Creando y ejecutando un contendor con Docker 🐳
+## Creando y ejecutando un contenedor con Docker 🐳
 
 Para crear una imagen de Docker de la aplicación, ejecute el siguiente comando:
 
@@ -75,7 +76,7 @@ docker build -t arep-lab-05 .
 
 Este comando creará una imagen de Docker con el nombre `arep-lab-05`.
 
-![image](https://github.com/ELS4NTA/AREP-LAB-05/assets/99996670/3502e710-8088-4d29-9043-73af7577f1cf)
+![image](https://github.com/ELS4NTA/AREP/assets/99996670/31142cfb-5d38-462f-9e96-0f4b03b1d115)
 
 Para ejecutar la aplicación en un contenedor Docker, ejecute el  comandos:
 
@@ -83,15 +84,15 @@ Para ejecutar la aplicación en un contenedor Docker, ejecute el  comandos:
 docker run -d -p 8080:46000 --name arep-lab-05 arep-lab-05
 ```
 
-![image](https://github.com/ELS4NTA/AREP-LAB-05/assets/99996670/c1a212ba-70f6-4f6b-af4d-e1b6f704545f)
+![image](https://github.com/ELS4NTA/AREP/assets/99996670/70d6fefd-59ba-490c-91c3-42a5558d4d05)
 
 El anterior comando ejecutará un contenedor con la aplicación mapeando el puerto 46000 del contenedor al puerto 8080 del host. Le pondrá el nombre `arep-lab-05` al contenedor usando la imagen `arep-lab-05`. Diríjase a su navegador de preferencia y vaya a la siguiente dirección: [http://localhost:8080](http://localhost:8080) para ver la aplicación en funcionamiento.
 
-## Arquitecura de la aplicación 📐
+## Arquitectura de la aplicación 📐
 
-Los modulos de la aplicación son los siguientes:
+Los módulos de la aplicación son los siguientes:
 
-- **CalculatorService**: Es el servicio que se encarga de realizar las operaciones como seno, coseno, una palabra palindroma y la magnitud de un vector.
+- **CalculatorService**: Es el servicio que se encarga de realizar las operaciones como seno, coseno, una palabra palindrome y la magnitud de un vector.
 
 ## Versionado 📌
 
