@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Memory Game</title>
+        <meta charset="UTF-8" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./img/favicon.png" />
+        <link rel="stylesheet" href="./css/styles.css" />
+    </head>
+    <body>
+        <section>
+            <h1 class="memory-title">Movie Explorer</h1>
+            <form class="movie-form" action="/movie">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Insert your movie name here" class="input-field" /><br /><br />
+                <input type="button" value="Submit" onclick="loadGetMsg()" class="submit-button" />
+            </form>
+            <div id="getrespmsg"></div>
+            <script src="./js/movie.js"></script>
+        </section>
+        <section class="game">
+            <h1 class="memory-title">Memory Card Game</h1>
+            <section class="memory-game">
+                <div class="memory-card" data-framework="apple">
+                    <img class="front-face" src="./img/apple.png" alt="apple" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+                <div class="memory-card" data-framework="apple">
+                    <img class="front-face" src="./img/apple.png" alt="apple" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+    
+                <div class="memory-card" data-framework="banana">
+                    <img class="front-face" src="./img/banana.png" alt="banana" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+                <div class="memory-card" data-framework="banana">
+                    <img class="front-face" src="./img/banana.png" alt="banana" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+    
+                <div class="memory-card" data-framework="cherry">
+                    <img class="front-face" src="./img/cherry.png" alt="cherry" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+                <div class="memory-card" data-framework="cherry">
+                    <img class="front-face" src="./img/cherry.png" alt="cherry" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+    
+                <div class="memory-card" data-framework="grape">
+                    <img class="front-face" src="./img/grape.png" alt="grape" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+                <div class="memory-card" data-framework="grape">
+                    <img class="front-face" src="./img/grape.png" alt="grape" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+    
+                <div class="memory-card" data-framework="kiwi">
+                    <img class="front-face" src="./img/kiwi.png" alt="kiwi" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+                <div class="memory-card" data-framework="kiwi">
+                    <img class="front-face" src="./img/kiwi.png" alt="kiwi" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+    
+                <div class="memory-card" data-framework="mango">
+                    <img class="front-face" src="./img/mango.png" alt="mango" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+                <div class="memory-card" data-framework="mango">
+                    <img class="front-face" src="./img/mango.png" alt="mango" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+    
+                <div class="memory-card" data-framework="mangosteen">
+                    <img class="front-face" src="./img/mangosteen.png" alt="mangosteen" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+                <div class="memory-card" data-framework="mangosteen">
+                    <img class="front-face" src="./img/mangosteen.png" alt="mangosteen" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+    
+                <div class="memory-card" data-framework="orange">
+                    <img class="front-face" src="./img/orange.png" alt="orange" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+                <div class="memory-card" data-framework="orange">
+                    <img class="front-face" src="./img/orange.png" alt="orange" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+    
+                <div class="memory-card" data-framework="strawberry">
+                    <img class="front-face" src="./img/strawberry.png" alt="strawberry" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+                <div class="memory-card" data-framework="strawberry">
+                    <img class="front-face" src="./img/strawberry.png" alt="strawberry" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+    
+                <div class="memory-card" data-framework="watermelon">
+                    <img class="front-face" src="./img/watermelon.png" alt="watermelon" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+                <div class="memory-card" data-framework="watermelon">
+                    <img class="front-face" src="./img/watermelon.png" alt="watermelon" />
+                    <img class="back-face" src="./img/favicon.png" alt="badge" />
+                </div>
+            </section>
+        </section>
+
+        <script src="./js/app.js"></script>
+        <script src="./js/movie.js"></script>
+    </body>
+</html>
