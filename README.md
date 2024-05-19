@@ -2,7 +2,7 @@
 
 ## Descripción de la aplicación 📖
 
-Este laboratorio explora la arquitectura del microframework WEB denominado sparkweb [sparkjava](https://sparkjava.com/). Este micro framework permite construir aplicaciones web de manera simple usando funciones lambda, se contruye un servidor web que permite una funcionalidad similar a la de sparkjava.
+Este laboratorio explora la arquitectura del microframework WEB denominado sparkweb [sparkjava](https://sparkjava.com/). Este micro framework permite construir aplicaciones web de manera simple usando funciones lambda, se construye un servidor web que permite una funcionalidad similar a la de sparkjava.
 
 También permite el acceso a un juego de memoria junto con un creador de batidos de frutas, el servidor web es capaz de leer los archivos del disco local y retornar todos los archivos solicitados, incluyendo páginas html, archivos java script, css e imágenes.
 
@@ -10,13 +10,13 @@ Adiconal a esto permite realizar consultas a un API externo de [omdbapi](https:/
 
 Disfruta creando diferentes batidos de frutas y jugando a encontrar las parejas de cartas en el juego de memoria.
 
-![image](https://github.com/ELS4NTA/AREP-LAB-03/assets/99996670/d565b1e3-e430-474a-8e67-849ee35ce0f7)
+![image](https://github.com/ELS4NTA/AREP/assets/99996670/c57f5faf-fe87-49ef-a900-7b0550a2d4bd)
 
-![image](https://github.com/ELS4NTA/AREP-LAB-03/assets/99996670/68ab98e1-6f78-4e1f-80bd-0f99abdcec0c)
+![image](https://github.com/ELS4NTA/AREP/assets/99996670/3954d27b-8a61-428c-b83a-b6798393215c)
 
-![image](https://github.com/ELS4NTA/AREP-LAB-03/assets/99996670/b657762d-ab9f-4b31-b1c0-07364ef58ead)
+![image](https://github.com/ELS4NTA/AREP/assets/99996670/612f504c-0ff2-481c-9f1c-92256575cf2c)
 
-![image](https://github.com/ELS4NTA/AREP-LAB-03/assets/99996670/989e6918-df03-4170-976f-5bfb86d693c6)
+![image](https://github.com/ELS4NTA/AREP/assets/99996670/06711ecc-48d1-44ed-a1f7-94734d73bede)
 
 ## Comenzando 🚀
 
@@ -36,9 +36,9 @@ Las siguientes instrucciones le permitirán obtener una copia del proyecto en fu
 Realice los siguientes pasos para clonar el proyecto en su máquina local.
 
 ```bash
-git clone https://github.com/ELS4NTA/AREP-LAB-03.git
-cd AREP-LAB-03/
-
+git clone https://github.com/ELS4NTA/AREP.git
+cd AREP/
+git checkout taller-3
 ```
 
 ## Ejecutando la aplicación ⚙️
@@ -47,10 +47,9 @@ Para ejecutar la aplicación, ejecute el siguiente comando:
 
 ```bash
 mvn clean compile exec:java '-Dexec.mainClass=edu.eci.arep.App'
-
 ```
 
-El anterior comando limpiará las contrucciones previas, compilará y empaquetará el código en un jar y luego ejecutará la aplicación.
+El anterior comando limpiará las construcciones previas, compilará y empaquetará el código en un jar y luego ejecutará la aplicación.
 
 Diríjase a su navegador de preferencia y vaya a la siguiente dirección: [http://localhost:35000/index.html](http://localhost:35000/index.html) para ver la aplicación en funcionamiento.
 
@@ -60,7 +59,6 @@ Para ejecutar las pruebas, ejecute el siguiente comando:
 
 ```bash
 mvn test
-
 ```
 
 ## Generando Javadoc 📦
@@ -69,10 +67,9 @@ Para generar la documentación de la aplicación, ejecute el siguiente comando, 
 
 ```bash
 mvn site
-
 ```
 
-Despues de ejecutar el comando anterior, abra el archivo `index.html` que se encuentra en el directorio `target/site/` con su navegador de preferencia luego búsque la sección **project reports** y haga click en la opción que dice `Project Javadoc` para ver la documentación de la aplicación.
+Después de ejecutar el comando anterior, abra el archivo `index.html` que se encuentra en el directorio `target/site/` con su navegador de preferencia luego busque la sección **project reports** y haga click en la opción que dice `Project Javadoc` para ver la documentación de la aplicación.
 
 ## Cómo se desarrollarían aplicaciones con este proyecto 🧩
 
@@ -81,32 +78,32 @@ Para desarrollar aplicaciones con este proyecto:
 Se puede seleccionar la ruta especifica de los archivos que se desean leer.
 
 ```java
-SantaSpark.staticFileLocation(/* Ruta estatica de archivos */);
+SantaSpark.staticFileLocation(/* Ruta estática de archivos */);
 ```
 
 Se puede seleccionar conexiones get y post para el servidor web recibe una URI a la función lambda que se ejecutará cuando se reciba una solicitud en esa URI.
 
 ```java
 SantaSpark.get(/* Ruta */, (requestURI) -> {
-    /* Codigo de la ruta */
+    /* Código de la ruta */
     return /* Respuesta */;
 });
 
 SantaSpark.post(/* Ruta */, (requestURI) -> {
-    /* Codigo de la ruta */
+    /* Código de la ruta */
     return /* Respuesta */;
 });
 ```
 
-## Arquitecura de la aplicación 📐
+## Arquitectura de la aplicación 📐
 
 Esta aplicación es un cliente web que se ejecuta en el navegador y utiliza JSON para el formato de mensajes. Actúa como un servidor de fachada, encapsulando llamadas a servicios web externos a través de HTTP.
 
 La fachada de servicios implementa un caché para evitar llamadas duplicadas, almacenando las respuestas como cadenas y comparándolas.
 
-Los modulos de la aplicación son los siguientes:
+Los módulos de la aplicación son los siguientes:
 
-* **Cache**: Contiene la implementación del caché de la aplicación para peliculas.
+* **Cache**: Contiene la implementación del caché de la aplicación para películas.
 * **HttpServer**: Contiene la implementación del servidor web de la aplicación.
 * **HttpMovieConnection**: Contiene la implementación del servicio de conexión a la API externa.
 * **SantaSpark**: Contiene la implementación del microframework web.
