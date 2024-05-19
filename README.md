@@ -2,7 +2,7 @@
 
 ## Descripción de la aplicación 📖
 
-Este laboratorio explora la creación de un prototipo mínimo que demuestra capcidades reflexivas de JAVA y permite cargar un bean (POJO) y derivar una aplicación Web a partir de él similar a la de [Spring](https://spring.io/guides/gs/spring-boot).
+Este laboratorio explora la creación de un prototipo mínimo que demuestra capacidades reflexivas de JAVA y permite cargar un bean (POJO) y derivar una aplicación Web a partir de él similar a la de [Spring](https://spring.io/guides/gs/spring-boot).
 
 Además contiene una mini implementación del microframework WEB denominado [sparkjava](https://sparkjava.com/). Este micro framework permite construir aplicaciones web de manera simple usando funciones lambda.
 
@@ -14,7 +14,7 @@ Adicionalmente, la aplicación permite el acceso a un servicio de tienda de bati
 
 Disfruta creando diferentes batidos de frutas y jugando a encontrar las parejas de cartas en el juego de memoria.
 
-![image](https://github.com/ELS4NTA/AREP-LAB-04/assets/99996670/dd58723e-9a2d-49e3-8548-2c8d7acac704)
+![image](https://github.com/ELS4NTA/AREP/assets/99996670/9ccf9e27-933a-4b61-86d9-8d80c0a66cd9)
 
 ## Comenzando 🚀
 
@@ -34,9 +34,9 @@ Las siguientes instrucciones le permitirán obtener una copia del proyecto en fu
 Realice los siguientes pasos para clonar el proyecto en su máquina local.
 
 ```bash
-git clone https://github.com/ELS4NTA/AREP-LAB-04.git
-cd AREP-LAB-04/
-
+git clone https://github.com/ELS4NTA/AREP.git
+cd AREP/
+git checkout taller-4
 ```
 
 ## Ejecutando la aplicación ⚙️
@@ -45,10 +45,9 @@ Para ejecutar la aplicación, ejecute el siguiente comando:
 
 ```bash
 mvn clean compile exec:java '-Dexec.mainClass=edu.eci.arep.App'
-
 ```
 
-El anterior comando limpiará las contrucciones previas, compilará y luego ejecutará la aplicación.
+El anterior comando limpiará las construcciones previas, compilará y luego ejecutará la aplicación.
 
 Diríjase a su navegador de preferencia y vaya a la siguiente dirección: [http://localhost:35000/index.html](http://localhost:35000/index.html) para ver la aplicación en funcionamiento.
 
@@ -70,13 +69,13 @@ mvn site
 
 ```
 
-Despues de ejecutar el comando anterior, abra el archivo `index.html` que se encuentra en el directorio `target/site/` con su navegador de preferencia luego búsque la sección **project reports** y haga click en la opción que dice `Project Javadoc` para ver la documentación de la aplicación.
+Después de ejecutar el comando anterior, abra el archivo `index.html` que se encuentra en el directorio `target/site/` con su navegador de preferencia luego busque la sección **project reports** y haga click en la opción que dice `Project Javadoc` para ver la documentación de la aplicación.
 
 ## Cómo se desarrollarían aplicaciones con este proyecto 🧩
 
 Para desarrollar aplicaciones con este proyecto:
 
-Crear componentes con la anonotación `@Component`.
+Crear componentes con la anotación `@Component`.
 
 ```java
 @Component
@@ -94,15 +93,15 @@ public static String hello() {
 }
 ```
 
-## Arquitecura de la aplicación 📐
+## Arquitectura de la aplicación 📐
 
 Esta aplicación es un cliente web que se ejecuta en el navegador y utiliza JSON para el formato de mensajes. Actúa como un servidor de fachada, encapsulando llamadas a servicios web externos a través de HTTP.
 
 La fachada de servicios implementa un caché para evitar llamadas duplicadas, almacenando las respuestas como cadenas y comparándolas.
 
-Los modulos de la aplicación son los siguientes:
+Los módulos de la aplicación son los siguientes:
 
-* **Cache**: Contiene la implementación del caché de la aplicación para peliculas.
+* **Cache**: Contiene la implementación del caché de la aplicación para películas.
 * **HttpServer**: Contiene la implementación del servidor web de la aplicación.
 * **HttpMovieConnection**: Contiene la implementación del servicio de conexión a la API externa.
 * **FruitShopService**: Contiene la implementación del servicio de la tienda de batidos.
