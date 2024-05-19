@@ -4,7 +4,7 @@
 
 Este laboratorio explora el uso un certificado `SSL` para asegurar la comunicación entre el cliente y el servidor a través de `HTTPS`. La aplicación permite a los usuarios autenticarse y ver una lista de dulces. Utiliza el framework [SparkJava](https://sparkjava.com/). Se ejecuta en dos máquinas EC2 de [AWS](https://aws.amazon.com/), una para el servidor de autenticación y otra para el servidor de la aplicación.
 
-https://github.com/ELS4NTA/AREP-LAB-07/assets/99996670/351575d6-50a4-46e3-94f6-701d3d1d2d40
+https://github.com/ELS4NTA/AREP/assets/99996670/d2ccb5f6-e531-45dd-a290-e0877db35b67
 
 ## Comenzando 🚀
 
@@ -19,7 +19,7 @@ Las siguientes instrucciones le permitirán obtener una copia del proyecto en fu
 > [!IMPORTANT]
 > Es necesario tener instalado Git, Maven y Java 17 para poder ejecutar el proyecto.
 
-### Instalacion requisitos AWS ☁️
+### Instalación requisitos AWS ☁️
 
 Ejecute los siguientes comandos para instalar git, maven y java en su máquina EC2.
 
@@ -42,8 +42,9 @@ sudo yum install -y apache-maven
 Realice los siguientes pasos para clonar el proyecto en su máquina local.
 
 ```bash
-git clone https://github.com/ELS4NTA/AREP-LAB-07.git
-cd AREP-LAB-07/
+git clone https://github.com/ELS4NTA/AREP.git
+cd AREP/
+git checkout taller-7
 ```
 
 ### Generando llaves y certificados 🔏
@@ -95,9 +96,9 @@ Para generar la documentación de la aplicación, ejecute el siguiente comando, 
 mvn site
 ```
 
-Despues de ejecutar el comando anterior, abra el archivo `index.html` que se encuentra en el directorio `target/site/` con su navegador de preferencia luego búsque la sección **project reports** y haga click en la opción que dice `Project Javadoc` para ver la documentación de la aplicación.
+Después de ejecutar el comando anterior, abra el archivo `index.html` que se encuentra en el directorio `target/site/` con su navegador de preferencia luego busque la sección **project reports** y haga click en la opción que dice `Project Javadoc` para ver la documentación de la aplicación.
 
-## Arquitecura de la aplicación 📐
+## Arquitectura de la aplicación 📐
 
 **LoginApp**
 
