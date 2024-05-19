@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit Party</title>
+    <link rel="icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/template.css">
+    <link rel="stylesheet" href="./css/fruit.css">
+</head>
+<body>
+    <div class="top_container">
+        <header class="header_section">
+            <nav class="navbar">
+                <a class="navbar-brand" href="index.html"><span>Santa's Web</span></a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><span>Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="movie.html"><span>Movie Explorer</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="game.html"><span>Memory Game</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fruit.html"><span>Fruit Party</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="hero_section">
+            <div class="hero-container">
+                <div class="hero_detail-box">
+                    <div>
+                        <h1><span>Smoothie</span> maker</h1>
+                        <form class="movie-form">
+                            <label for="postname">Place your magic name for your smoothie</label><br>
+                            <p>The smoothie factory chooses the best fruits for you to enjoy</p><br>
+                            <input type="text" id="postname" name="name" placeholder="Your smoothie name" class="input-field"><br>
+                            <input type="button" value="Submit" onclick="loadPostMsg(postname)" class="submit-button">
+                        </form>
+                    </div>
+                    
+                    <div id="postrespmsg"></div>
+                </div>
+            </div>
+        </section>
+        <section class="footer_section">
+            <p>&copy; <a href="https://github.com/ELS4NTA">ELS4NTA</a></p>
+        </section>
+        <script src="./js/fruit.js"></script>
+    </div>
+</body>
+</html>

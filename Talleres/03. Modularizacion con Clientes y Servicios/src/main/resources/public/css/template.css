@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #fff;
+}
+
+.top_container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url(../images/illustration.jpg);
+    background-size: 100% 100%;
+}
+
+.container {
+    max-width: 1170px;
+}
+
+/*header section*/
+.header_section {
+    padding-top: 2rem;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+}
+
+
+.navbar-nav .nav-link {
+    padding: 10px 20px;
+    font-weight: 700;
+    color: #060606;
+    text-align: center;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5rem;
+}
+
+.nav-link span:hover {
+    background: linear-gradient(90deg, #d53369 0%, #ffb30f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+.navbar-brand span {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.navbar-brand span:hover {
+    background: linear-gradient(90deg, #d53369 0%, #ffb30f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*end header section*/
+
+/* hero section */
+.hero-container {
+    display: flex;
+    justify-content: center;
+}
+
+.hero_detail-box {
+    color: #000000;
+}
+
+.hero_detail-box h1 {
+    font-size: 50px;
+    color: #000000;
+    font-weight: 600;
+}
+
+.hero_detail-box span {
+    background: linear-gradient(90deg, #ffb30f 0%, #d53369 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* end hero section */
+
+.footer_section {
+    padding: 20px 15px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight: 400;
+}
+
+.footer_section a {
+    color: #000;
+}
+
+.footer_section a:hover {
+    color: #fff;
+}
