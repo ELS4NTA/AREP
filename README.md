@@ -2,11 +2,9 @@
 
 ## Descripción de la aplicación 📖
 
-Este laboratorio explora patrones arquitecutrales en Amazon Web Services (AWS) y su implementación en aplicaciones web. La aplicación web es un servicio de log que almacena cadenas de texto y las muestra en una página web. Utiliza el framework [SparkJava](https://sparkjava.com/) para crear servicios REST y el motor de base de datos [MongoDB](https://www.mongodb.com/) para almacenar datos. Estos se ejecutan en contenedores Docker y se despliega en una instancia EC2 de AWS.
+Este laboratorio explora patrones arquitecturales en Amazon Web Services (AWS) y su implementación en aplicaciones web. La aplicación web es un servicio de log que almacena cadenas de texto y las muestra en una página web. Utiliza el framework [SparkJava](https://sparkjava.com/) para crear servicios REST y el motor de base de datos [MongoDB](https://www.mongodb.com/) para almacenar datos. Estos se ejecutan en contenedores Docker y se despliega en una instancia EC2 de AWS.
 
-
-https://github.com/ELS4NTA/AREP-LAB-06/assets/99996670/57d031da-e44a-4ad4-a87d-64313853845a
-
+[AREP-LAB-06](https://github.com/ELS4NTA/AREP/assets/99996670/c381d06a-9b29-47ec-9951-1850323a6459)
 
 ## Comenzando 🚀
 
@@ -27,8 +25,9 @@ Las siguientes instrucciones le permitirán obtener una copia del proyecto en fu
 Realice los siguientes pasos para clonar el proyecto en su máquina local.
 
 ```bash
-git clone https://github.com/ELS4NTA/AREP-LAB-06.git
-cd AREP-LAB-06/
+git clone https://github.com/ELS4NTA/AREP.git
+cd AREP/
+git checkout taller-6
 ```
 
 ## Ejecutando la aplicación ⚙️
@@ -40,7 +39,7 @@ mvn clean install
 docker-compose up -d
 ```
 
-El anterior comando limpiará las contrucciones previas, compilará y luego ejecutará en distintos contenedores los servicios de la aplicación.
+El anterior comando limpiará las construcciones previas, compilará y luego ejecutará en distintos contenedores los servicios de la aplicación.
 
 Diríjase a su navegador de preferencia y vaya a la siguiente dirección: [http://localhost:8080](http://localhost:8080) para ver la aplicación en funcionamiento.
 
@@ -52,9 +51,9 @@ Para generar la documentación de la aplicación, ejecute el siguiente comando, 
 mvn site
 ```
 
-Despues de ejecutar el comando anterior, abra el archivo `index.html` que se encuentra en el directorio `target/site/` con su navegador de preferencia luego búsque la sección **project reports** y haga click en la opción que dice `Project Javadoc` para ver la documentación de la aplicación.
+Después de ejecutar el comando anterior, abra el archivo `index.html` que se encuentra en el directorio `target/site/` con su navegador de preferencia luego busque la sección **project reports** y haga click en la opción que dice `Project Javadoc` para ver la documentación de la aplicación.
 
-## Arquitecura de la aplicación 📐
+## Arquitectura de la aplicación 📐
 
 La aplicación que describes tiene varios componentes interconectados
 
