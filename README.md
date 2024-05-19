@@ -1,6 +1,6 @@
 # TALLER 9: Large Lenguage Models (LLMs)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ELS4NTA/AREP-LAB-09/blob/main/tallerllm.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ELS4NTA/AREP-LAB-09/blob/taller-9/tallerllm.ipynb)
 
 ## Comenzando 🚀
 
@@ -18,8 +18,9 @@ Las siguientes instrucciones le permitirán obtener una copia del proyecto en fu
 Realice los siguientes pasos para clonar el proyecto en su máquina local.
 
 ```bash
-git clone https://github.com/ELS4NTA/AREP-LAB-09.git
-cd AREP-LAB-09/
+git clone https://github.com/ELS4NTA/AREP.git
+cd AREP/
+git checkout taller-9
 ```
 
 Cree un entorno virtual python e instale las dependencias del proyecto.
@@ -62,7 +63,7 @@ Se utiliza la biblioteca Lang Chain para interactuar con OpenAI y enviar las sol
 ```bash
 python chatgpt.py
 ```
-![Screenshot 2024-04-18 093116](https://github.com/ELS4NTA/AREP-LAB-09/assets/99996670/ee97d596-9a2d-4c9d-a6ad-49df2e2c4bd8)
+![image](https://github.com/ELS4NTA/AREP/assets/99996670/ac032f30-6de5-4d14-895d-6134a31400a5)
 
 ### Escribir un RAG simple utilizando una base de datos de vectores en memoria
 
@@ -71,7 +72,7 @@ Creación de un Recuperador de Respuestas Generativas (RAG) simple utilizando un
 ```bash
 python memoryrag.py
 ```
-![Screenshot 2024-04-18 093106](https://github.com/ELS4NTA/AREP-LAB-09/assets/99996670/7555c992-6da3-4322-a3e7-172e9807ee39)
+![image](https://github.com/ELS4NTA/AREP/assets/99996670/b8a47b8f-992d-40a2-9d47-da95df0d045a)
 
 ### Crear un RAG simple utilizando Pinecone
 
@@ -80,7 +81,7 @@ Creación de un Recuperador de Respuestas Generativas (RAG) simple utilizando Pi
 ```bash
 python pineconerag.py
 ```
-![Screenshot 2024-04-18 093048](https://github.com/ELS4NTA/AREP-LAB-09/assets/99996670/ae5e8517-380f-40c4-9088-688f21a42af4)
+![image](https://github.com/ELS4NTA/AREP/assets/99996670/820c0e66-620d-46de-896a-1d0f7630e531)
 
 ## Construido con 🛠️
 
